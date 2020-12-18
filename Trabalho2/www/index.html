@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+
+        <link rel="stylesheet" href="css/phonon.css">
+
+
+        <title>MarQR</title>
+    </head>
+    <body>
+
+        <div class="" id="Registro" style="display: none;">
+
+            <form style="margin: 0 auto; text-align: center;">
+                <div class="col">
+                  <div class="row" style="margin: 2rem;">
+                    <input id="RegistroCPF" type="text" value="" placeholder="CPF">
+                    <input id="RegistroNome" type="text" value="" placeholder="Nome Completo">
+                    <input id="RegistroPass" type="password" value="" placeholder="Senha">
+                    <input id="RegistroPassConfirm" type="password" value="" placeholder="Confirmar Senha">
+                    <input id="RegistroEMail" type="text" value="" placeholder="E-Mail">
+                  </div>
+                  <div class="col" style="margin: 1rem;">
+                    <button id="ConfirmaRegistro" class="btn btn-primary btn-sm">Registrar</button>
+                    <button id="CancelarRegistro" class="btn btn-primary btn-sm">Cancelar</button>
+                  </div>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="app" id="Login" style="display: block;">
+
+            <div>
+
+                <form style="margin: 0 auto; text-align: center;">
+                    <div class="col">
+                      <div class="row" style="margin: 2rem;">
+                        <input id="LoginUser" type="text" value="" placeholder="Usuario (CPF)">
+                        <input id="LoginPass" type="password" value="" placeholder="Senha">
+                      </div>
+                      <div class="col" style="margin: 1rem;">
+                        <button id="BotaoLoga" class="btn btn-primary btn-sm">Entrar</button>
+                        <button id="BotaoRegistra" class="btn btn-primary btn-sm">Registrar</button>
+                      </div>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div id="UsuarioInterface" style="display: none;">
+
+                <div style="margin: 5px;">                    
+                    <div style="max-height: 100%; margin: 0 auto; background-color: blue;">
+                        <ul class="list" style="float: left; max-width: 20%; text-align: center;">
+                            <li>
+                                <button id="UsuarioDesconectar" type="button" class="btn btn-secondary">Sair</button>
+                            </li>
+                            <li>
+                                <button id="UsuarioQRAnalise" type="button" class="btn btn-secondary">Analise QR</button>
+                            </li>
+                            <li>
+                                <button id="UsuarioTestaQR" type="button" class="btn btn-secondary">TesteQR</button>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div style="text-align: end; margin-right: 2rem;">
+                        
+                        <div class="custom-file" >
+                            <input id="QRImage" type="file" class="custom-file-input" id="customFile">
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+
+                <div style="text-align: right;">
+
+                    <img id="imageFile" style="display: block;">
+                    <!-- <canvas id="imageFile" style="display: block;"></canvas> -->
+
+                </div>
+
+        </div>
+
+
+
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/jsQR.js"></script>
+        <script src="js/phonon.js"></script>
+    </body>
+</html>
